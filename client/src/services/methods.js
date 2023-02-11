@@ -1,18 +1,19 @@
 import axios from "axios";
 
-export const mehods = {
-  URL: "http://localhost:8080",
+export const httpMehods = {
   responseReturned: [],
+
   getMethod: async function (url) {
-    console.log(this);
     try {
-      const response = await axios.get(`${this.URL}${url}`);
+      const response = await axios.get(`${url}`);
       this.responseReturned = response;
     } catch (error) {
       console.warn(`error.message`);
     }
+    console.log(this.responseReturned.data);
     return this.responseReturned;
   },
+
   postMethod: async function (url) {
     try {
       const response = await axios.post("url");

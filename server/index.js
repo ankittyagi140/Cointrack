@@ -1,16 +1,24 @@
-const methods = require("./services/services");
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const port = 8080;
+const path = require("path");
+const port = process.env.PORT || 8080;
 
-//adding middlewares
+//import routes
+const markets = require("./routes/api/markets");
+
+//middlewares
 app.use(cors());
 
-app.get("/markets", async (req, res, next) => {
-  const response = await methods.getMethod("/markets");
-  res.send(response.data);
-  res.end();
-});
+//define routes
+app.get("/api/markets", markets);
 
+// Serve static assets in production
+if (process.env.NODE_ENV === "production") {
+  //Set static folder
+  app.use(express.static("client/dist"));
+  app.get("*", (req, res, next) => {
+    res.sendFile(path.resolve("./client/dist/index.html"));
+  });
+}
 app.listen(port, console.log(`application is live on port ${port}`));
