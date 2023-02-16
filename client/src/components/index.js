@@ -1,0 +1,10 @@
+export { default as Header } from "./header/header";
+export { default as Footer } from "./footer/footer";
+export { default as Button } from "./button/button";
+export { default as LogIn } from "./logIn/logIn";
+export { default as SignUp } from "./signUp/signUp";
+export { default as Loading } from "./loading/loading";
+export { default as Trending } from "./trending/trending";
+export { default as TopGainers } from "./topGainers/topGainers";
+export { default as TopLoosers } from "./topLoosers/topLoosers";
+export { default as ControlledCheckbox } from "./checkbox/checkbox";

@@ -1,0 +1,51 @@
+@import "../../styles/style.scss";
+
+.filled_button,
+.outlined_button {
+  align-items: center;
+  border-radius: 8px;
+  display: inline-flex;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  justify-content: center;
+  outline: 0px;
+  font-weight: 600;
+  width: auto;
+  height: 32px;
+  font-size: 14px;
+  padding: 0px 16px;
+  line-height: 18px;
+}
+.filled_button {
+  background: rgb(56, 97, 251);
+  border: 0px;
+  color: rgb(255, 255, 255);
+}
+.outlined_button {
+  background: transparent;
+  border: 1px solid rgb(207, 214, 228);
+  color: rgb(0, 0, 0);
+}
+
+.form_button {
+  -webkit-box-align: center;
+  align-items: center;
+  background: rgb(56, 97, 251);
+  border: 0px;
+  border-radius: 8px;
+  display: inline-flex;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  -webkit-box-pack: center;
+  justify-content: center;
+  outline: 0px;
+  font-weight: 600;
+  width: 100%;
+  min-height: 56px;
+  font-size: 16px;
+  padding: 0px 24px;
+  line-height: 24px;
+  //   &:hover {
+  //     background-color: #000000;
+  //   }
+}

@@ -1,28 +1,24 @@
-const axios = require("axios");
+const httpMehods = require("./httpMethods");
 
-module.exports = mehods = {
-  URL: "https://api.coingecko.com/api/v3/coins",
-  // responseReturned: [],
-  getMethod: async function (url) {
-    try {
-      const response = await axios.get(
-        `${
-          this.URL
-        }${url}?vs_currency=${"usd"}&order=market_cap_desc&per_page=100&page=1&sparkline=false`
-      );
-      this.responseReturned = response;
-    } catch (error) {
-      console.warn(error.message);
-    }
-    return this.responseReturned;
+const services = {
+  marketsDataApi: function (url) {
+    return httpMehods.getMethod(
+      `${url}?vs_currency=${"usd"}&order=market_cap_desc&per_page=100&page=1&sparkline=false`
+    );
   },
-  postMethod: async function (url) {
-    try {
-      const response = await axios.post("url");
-      this.responseReturned = response;
-    } catch (error) {
-      console.warn(`error.message`);
-    }
-    return this.responseReturned;
+  topGainerCoinApi: function (url) {
+    return httpMehods.getMethod(
+      `${url}?vs_currency=${"usd"}&order=market_cap_desc&per_page=100&page=1&sparkline=false`
+    );
+  },
+  trendingCoinApi: function (url) {
+    return httpMehods.getMethod(url);
+  },
+  recentlyAddedCoinApi: function (url) {
+    return httpMehods.getMethod(url);
+  },
+  coinDetailsPageApi: function (url) {
+    return httpMehods.getMethod(url);
   },
 };
+module.exports = services;

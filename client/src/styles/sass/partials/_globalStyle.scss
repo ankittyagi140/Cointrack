@@ -1,0 +1,227 @@
+#next {
+    height: 100%;
+  }
+  
+  .container {
+    width: 1064px;
+    margin: auto;
+    height: 100%;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  
+  .textCenter {
+    text-align: center;
+  }
+  
+  .textUppercase {
+    text-transform: uppercase;
+  }
+  .textCapitalize {
+    text-transform: capitalize;
+  }
+  .textEllipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .lineClamp {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    // word-break: break-word;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .alignItemsStart {
+    align-items: flex-start;
+  }
+  
+  .alignItemsEnd {
+    align-items: flex-end;
+  }
+  
+  .justifyContentStart {
+    justify-content: flex-start;
+  }
+  
+  .justifyContentEnd {
+    justify-content: flex-end;
+  }
+  
+  .justifyContentCenter {
+    justify-content: center;
+  }
+  
+  .textPrimary {
+    color: $primaryColor;
+  }
+  
+  .textSecondary {
+    color: $secondaryColor;
+  }
+  
+  .scroll {
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: #ccc;
+    }
+  }
+  
+  .hideVisibility {
+    visibility: hidden;
+  }
+  
+  .displayNone {
+    display: none;
+  }
+  
+  .customScrollSlider {
+    display: flex;
+    align-items: flex-start;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 0 -20px;
+    padding: 0 20px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .customCheckbox {
+    position: relative;
+    height: 18px;
+    width: 18px;
+    input {
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      position: absolute;
+      display: block;
+      margin: 20px;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      opacity: 0;
+    }
+    label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      display: block;
+      pointer-events: none;
+      &:after {
+        content: "";
+        background: $white;
+        border: 2px solid $tertiaryColor;
+        border-radius: 2px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    }
+  
+    input:checked + label:after {
+      content: "\2713";
+      font-size: 15px;
+      background: $tertiaryColor;
+      color: $white;
+      text-indent: 2px;
+      line-height: 0.9;
+      box-shadow: none;
+    }
+  }
+  
+  .cancelIco {
+    position: relative;
+    @extend .flex;
+    height: 16px;
+    width: 16px;
+    transform: rotate(45deg);
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &::before {
+      width: 16px;
+      border-bottom: 2px solid rgba($primaryColor, 0.5);
+    }
+    &::after {
+      height: 16px;
+      border-left: 2px solid rgba($primaryColor, 0.5);
+    }
+  }
+  
+  .checkbox {
+    position: absolute;
+    z-index: 9;
+    width: 18px;
+    height: 18px;
+    @include border-radius(2px);
+    border: 2px solid $tertiaryColor;
+    background: $white;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    @extend .flexCenter;
+    span {
+      font-size: 14px;
+      font-family: $fontBold;
+      display: none;
+      &:before {
+        font-weight: 600;
+      }
+    }
+    &.checked {
+      background-color: $tertiaryColor;
+      span {
+        display: block;
+      }
+    }
+  }
+  .fadeAnimation {
+    animation: fade 1.5s ease-in-out 0.5s infinite;
+    @keyframes fade {
+      0% {
+        opacity: 0.5;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0.5;
+      }
+    }
+  }
+  

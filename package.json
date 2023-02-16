@@ -10,7 +10,7 @@
     "server": "nodemon server",
     "lint": "eslint \"client/src/**/*.{js,jsx,ts}\"",
     "lint:fix": "eslint \"client/src/**/*.{js,jsx,ts}\" --fix",
-    "dev": "concurrently \"node server\" \" webpack server\""
+    "dev": "concurrently \"nodemon server\" \" webpack server\""
   },
   "repository": {
     "type": "git",
@@ -26,11 +26,15 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.8",
+    "@reduxjs/toolkit": "^1.9.2",
     "axios": "^1.3.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router": "^6.8.1",
+    "react-router-dom": "^6.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",

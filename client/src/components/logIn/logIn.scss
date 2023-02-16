@@ -1,0 +1,35 @@
+.logIn_form {
+  width: 100%;
+  padding: 20px 0;
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 40px;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 100%;
+      label {
+        font-size: 14px;
+      }
+      input {
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(207, 214, 228);
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: rgb(0, 0, 0);
+        max-width: 100%;
+        outline: 0px;
+        padding: 0px 18px;
+        width: 100%;
+        font-size: 14px;
+        min-height: 56px;
+        line-height: 21px;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.recently_added {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  box-shadow: rgb(88 102 126 / 8%) 0px 4px 24px,
+    rgb(88 102 126 / 12%) 0px 1px 2px;
+  box-sizing: border-box;
+  margin: 0px;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  transition: box-shadow 150ms ease-in 0s;
+  .coin_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    cursor: pointer;
+    .coin_data {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+    }
+    .coin_price {
+      color: #16c784;
+    }
+  }
+}

@@ -1,5 +1,28 @@
-.card_container{
+.home_container {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 15px;
+  .market_view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px;
+    padding: 20px 0;
+  }
+  .highlight_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(15em,1fr));
+    grid-template-columns: repeat(auto-fit, (minmax(300px, 1fr)));
     gap: 1rem;
+    width: 100%;
+  }
+  .card_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    gap: 1rem;
+    width: 100%;
+  }
 }

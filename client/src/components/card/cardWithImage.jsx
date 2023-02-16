@@ -12,6 +12,7 @@ export default function CardWithImage({
   name,
   height,
   width,
+  current_price,
 }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -34,6 +35,9 @@ export default function CardWithImage({
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {name}
+          </Typography>
+          <Typography gutterBottom variant="h5" component="div">
+            {current_price} USD
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {text}

@@ -1,11 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
-import { Home } from "@apps";
+import "../src/styles/commons.scss";
+import Routing from "./routing";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Home />
+    <Provider store={store}>
+      <Routing />
+    </Provider>
   </React.StrictMode>
 );
