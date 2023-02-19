@@ -8,7 +8,7 @@ const Details = () => {
 
   useEffect(() => {
     const fetchCoinDetails = async (id) => {
-      const response = await services.coinDetailsPageApi(`/coins/${id}`);
+      const response = await services.coinDetailsPageApi(`/api/coins/${id}`);
       console.log(response.data);
     };
     fetchCoinDetails(id);
